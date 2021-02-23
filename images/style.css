@@ -1,0 +1,172 @@
+*,
+*::after*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(271, 31%, 16%);
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    position: relative;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+}
+
+.timer1 {
+    padding: 15px;
+}
+
+.days {
+    width: 140px;
+    box-shadow: 0 10px 1px 1px hsl(234, 17%, 12%);
+    border-radius: 10px;
+    height: 140px;
+    font-size: 5rem;
+    font-weight: 700;
+    display: flex;
+    color: hsl(345, 95%, 68%);
+    background: hsl(236, 21%, 26%);
+    line-height: 4rem;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.days:before,
+.days:after {
+    content: '';
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: hsl(271, 31%, 16%);
+    position: absolute;
+}
+
+.days:before {
+    left: -7px;
+}
+
+.days:after {
+    right: -7px;
+}
+
+.caption {
+    text-transform: uppercase;
+    color: hsl(237, 18%, 59%);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.con1 {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 10vh;
+    font-size: 1.3rem;
+    letter-spacing: 0.3rem;
+}
+
+.stars {
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 15vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span {
+    height: 50%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid #0f0f18;
+    z-index: 40;
+    opacity: 0.3;
+    transition-delay: 200ms;
+    transition-duration: 1s;
+    background: hsl(234, 17%, 12%);
+}
+
+
+/*pan:hover {
+    transition-delay: 200ms;
+    transition-duration: 1s;
+    perspective-origin: top left;
+    transform: rotateX(180deg) translateY(-100%);
+}*/
+
+.icons {
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.icons>svg {
+    margin-right: 20px;
+}
+
+.icons>svg>path:hover {
+    fill: hsl(345, 95%, 68%);
+    border: solid 3px red;
+}
+
+.hills {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 25vh;
+}
+
+
+/*
+.hills>svg {
+    width: 100vw;
+    height: 20vh;
+}*/
+
+@media screen and (max-width:800px) {
+    .days {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .days {
+        width: 80px;
+        height: 80px;
+        font-size: 3rem;
+    }
+    .timer1 {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .days {
+        width: 55px;
+        height: 55px;
+        font-size: 2.5rem;
+    }
+    .con1 {
+        font-size: 14px;
+    }
+}
